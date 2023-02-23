@@ -78,7 +78,7 @@ class Window:
         keyboard_listener.start()
 
         while self.is_running:
-            if time.time() - self.last_activity_time > 2:
+            if time.time() - self.last_activity_time > 60:
                 message = time.strftime("%Y-%m-%d %H:%M:%S") + " - Inactividad registrada\n"
                 self.textarea.insert(tk.END, message)
                 self.textarea.see(tk.END)
