@@ -19,7 +19,7 @@ class Window:
         self.frame_button_status = tk.Frame(self.window)
         self.frame_button_status.pack(side=tk.TOP, fill=tk.X)
 
-        self.button = tk.Button(self.frame_button_status, text="Action", command=self.button_click)
+        self.button = tk.Button(self.frame_button_status, text="Activar / Desactivar", command=self.button_click)
         self.button.pack(side=tk.LEFT)
 
         self.status = tk.Label(self.frame_button_status, text="Status", anchor=tk.W)
@@ -92,7 +92,7 @@ class Window:
 
         mouse_listener.stop()
         keyboard_listener.stop()
-        pynput.keyboard.Controller().press(pynput.keyboard.Key.esc)  # Desbloquear el teclado si se bloqueó.
+        pynput.keyboard.Controller().press(pynput.keyboard.Key.esc)
 
 
 v = Window()
